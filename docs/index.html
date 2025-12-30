@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swin2SR Video Comparison</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0d1117;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    video {
+      width: 45%;
+      margin: 10px;
+      border: 1px solid #30363d;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>Original vs Enhanced (Swin2SR ×2)</h2>
+
+<button onclick="playBoth()">▶ Play Both</button>
+<button onclick="pauseBoth()">⏸ Pause Both</button>
+
+<br>
+
+<video id="v1" src="cctv.mp4" controls></video>
+<video id="v2" src="enhanced_video.mp4" controls></video>
+
+<script>
+function playBoth() {
+  const t = Math.max(v1.currentTime, v2.currentTime);
+  v1.currentTime = t;
+  v2.currentTime = t;
+  v1.play();
+  v2.play();
+}
+
+function pauseBoth() {
+  v1.pause();
+  v2.pause();
+}
+</script>
+
+</body>
+</html>
