@@ -66,14 +66,3 @@ To handle potentially large resolutions, the code implements an `enhance_tiled` 
 The final enhanced video is saved as `enhanced_video.mp4` using the `mp4v` codec.
 
 ---
-<div align="center">
-
-### Original Video
-<video src="https://github.com/user-attachments/assets/8acf7b84-99be-40c2-8dc6-36424e0cc659" controls></video>
-
-<br><br>
-
-### Enhanced Video (Swin2SR ×2)
-<video src="https://github.com/user-attachments/assets/055e2267-2e73-4f56-b94e-02f115e42314" controls></video>
-
-</div>
